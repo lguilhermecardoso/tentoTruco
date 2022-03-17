@@ -99,7 +99,7 @@ const Game = (
           >
             <TextButtonArea>
               <TextButton>
-                + {pointSum} Pontos
+                + {pointSum} {pointSum === 1 ? 'Ponto' : 'Pontos'}
               </TextButton>
             </TextButtonArea>
           </Button>
@@ -110,7 +110,7 @@ const Game = (
           >
             <TextButtonArea>
               <TextButton>
-                - 1 Pontos
+                - 1 Ponto
               </TextButton>
             </TextButtonArea>
           </Button>
@@ -138,7 +138,7 @@ const Game = (
           >
             <TextButtonArea>
               <TextButton>
-                + {pointSum} Pontos
+                + {pointSum} {pointSum === 1 ? 'Ponto' : 'Pontos'}
               </TextButton>
             </TextButtonArea>
           </Button>
@@ -149,7 +149,7 @@ const Game = (
           >
             <TextButtonArea>
               <TextButton>
-                - 1 Pontos
+                - 1 Ponto
               </TextButton>
             </TextButtonArea>
           </Button>
