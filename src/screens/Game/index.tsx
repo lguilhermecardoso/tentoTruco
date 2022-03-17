@@ -87,7 +87,15 @@ const Game = (
         <CardScoreAreaControls>
           <TextButton>Nós</TextButton>
           <Button
-            onPress={() => null}
+            onPress={() => {
+              if (teamScore1 + pointSum >= 12) {
+                setTeam1Score(12);
+                return;
+              } 
+              if(teamScore1 < 12) setTeam1Score(teamScore1 + pointSum);
+              setPointSum(1);
+              setTrucoTest('Trucar!!');
+            }}
           >
             <TextButtonArea>
               <TextButton>
@@ -96,7 +104,9 @@ const Game = (
             </TextButtonArea>
           </Button>
           <Button
-            onPress={() => null}
+            onPress={() => {
+              if(teamScore1 > 0) setTeam1Score(teamScore1 -1);
+            }}
           >
             <TextButtonArea>
               <TextButton>
@@ -116,7 +126,15 @@ const Game = (
         <CardScoreAreaControls>
           <TextButton>Eles</TextButton>
           <Button
-            onPress={() => null}
+            onPress={() => {
+              if (teamScore2 + pointSum >= 12) {
+                setTeam2Score(12);
+                return;
+              } 
+              if(teamScore2 < 12) setTeam2Score(teamScore2 + pointSum);
+              setPointSum(1);
+              setTrucoTest('Trucar!!');
+            }}
           >
             <TextButtonArea>
               <TextButton>
@@ -125,7 +143,9 @@ const Game = (
             </TextButtonArea>
           </Button>
           <Button
-            onPress={() => null}
+            onPress={() => {
+              if(teamScore2 > 0) setTeam2Score(teamScore2 -1);
+            }}
           >
             <TextButtonArea>
               <TextButton>
